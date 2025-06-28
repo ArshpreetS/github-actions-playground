@@ -3,7 +3,7 @@ name: Auto Request Reviewer
 on:
   pull_request:
     branches:
-      - master
+      - main
     types: [opened, ready_for_review]
 
 jobs:
