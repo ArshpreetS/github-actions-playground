@@ -1,0 +1,20 @@
+name: Hello world example
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: "Hello, thank you for contributing to this project"
